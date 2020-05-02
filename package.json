@@ -1,6 +1,6 @@
 {
   "name": "nebula-ui-kit",
-  "version": "0.0.11",
+  "version": "0.0.4",
   "main": "./css/nebula.css",
   "scripts": {
     "start": "npm run build -- --watch",
