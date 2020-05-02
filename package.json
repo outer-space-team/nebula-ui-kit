@@ -1,10 +1,10 @@
 {
   "name": "nebula-ui-kit",
-  "version": "0.0.0",
+  "version": "0.0.11",
   "main": "./css/nebula.css",
   "scripts": {
     "start": "npm run build -- --watch",
-    "build": "node-sass ./scss/nebula.scss ./css/nebula.css"
+    "build": "node-sass ./scss/ --output-style compressed --output ./css"
   },
   "devDependencies": {
     "css-loader": "^3.5.3",
