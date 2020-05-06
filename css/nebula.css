@@ -1,1 +1,1 @@
-.nuk-button{background-color:violet}.nuk-input{background-color:violet}
+button.nuk,.nuk-button{color:#fcf8ff;background-color:#6815eb;padding:0.2rem 0.6rem}button.nuk:hover,.nuk-button:hover{filter:grayscale(25%)}button.nuk:active,.nuk-button:active{filter:grayscale(50%)}.nuk-input{background-color:#6815eb}

@@ -1,3 +1,21 @@
+// Filter
+// Not supported in Edge 12 and IE
+// Chrome >= 53.0, 18.0 -webkit-
+// IE >= 13.0
+// Firefox >= 35.0
+// Safari >= 9.1, 6.0 -webkit-
+// Opera >= 40.0, 15.0 -webkit-
+@import "../variables/colors.scss";
+
+button.nuk,
 .nuk-button {
-  background-color: violet;
+  color: $light;
+  background-color: $primary;
+  padding: 0.2rem 0.6rem;
+  &:hover {
+    filter: grayscale(25%);
+  }
+  &:active {
+    filter: grayscale(50%);
+  }
 }
