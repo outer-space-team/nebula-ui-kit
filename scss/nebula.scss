@@ -1,2 +1,10 @@
 @import "./elements/button.scss";
 @import "./elements/input.scss";
+@import "./modifiers/sizing.scss";
+@import "./modifiers/main.scss";
+@import "./modifiers/colors.scss";
+@import "./mixins.scss";
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}

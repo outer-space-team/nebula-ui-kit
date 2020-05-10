@@ -1,21 +1,16 @@
-// Filter
-// Not supported in Edge 12 and IE
-// Chrome >= 53.0, 18.0 -webkit-
-// IE >= 13.0
-// Firefox >= 35.0
-// Safari >= 9.1, 6.0 -webkit-
-// Opera >= 40.0, 15.0 -webkit-
+// Properties that can be not supported:
+// filter, user-select
 @import "../variables/colors.scss";
+@import "../mixins.scss";
 
-button.nuk,
+.nuk,
 .nuk-button {
-  color: $light;
-  background-color: $primary;
-  padding: 0.2rem 0.6rem;
-  &:hover {
-    filter: grayscale(25%);
+  &:not(.secondary):not(.link):not(.success):not(.info):not(.warning):not(.danger):not(.light):not(.dark) {
+    @include primary;
   }
-  &:active {
-    filter: grayscale(50%);
-  }
+
+  @include clickable;
+  padding: 0.2rem 0.7rem;
+  border: none;
+  border-radius: 3px;
 }

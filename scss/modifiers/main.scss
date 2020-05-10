@@ -1,0 +1,10 @@
+@import "../variables/colors.scss";
+@import "../mixins.scss";
+
+.rounded {
+  @include rounded;
+}
+
+.clickable {
+  @include clickable;
+}

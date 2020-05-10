@@ -1,0 +1,166 @@
+// // Sizing
+// $xs: 0.65;
+// $sm: 0.85;
+// $md: 1;
+// $lg: 1.15;
+// $xl: 1.35;
+
+// @mixin xs($size) {
+//   font-size: $size * $xs;
+// }
+
+// @mixin sm($size) {
+//   font-size: $size * $sm;
+// }
+
+// @mixin md($size) {
+//   font-size: $size * $md;
+// }
+
+// @mixin lg($size) {
+//   font-size: $size * $lg;
+// }
+
+// @mixin xl($size) {
+//   font-size: $size * $xl;
+// }
+
+@import "./variables/colors.scss";
+
+@mixin clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+@mixin rounded {
+  border-radius: 100px;
+}
+
+// Colors
+@mixin primary {
+  @include selectors($primary);
+  background-color: $primary;
+  color: $light;
+  &.outlined {
+    background-color: $light;
+    color: $primary;
+    border-color: $primary;
+  }
+}
+
+@mixin secondary {
+  @include selectors($secondary);
+  background-color: $secondary;
+  color: $light;
+  &.outlined {
+    background-color: $light;
+    color: $secondary;
+    border-color: $secondary;
+  }
+}
+
+@mixin link {
+  @include selectors($link);
+  background-color: $link;
+  color: $light;
+  &.outlined {
+    background-color: $light;
+    color: $link;
+    border-color: $link;
+  }
+}
+
+@mixin success {
+  @include selectors($success);
+  background-color: $success;
+  color: $light;
+  &.outlined {
+    background-color: $light;
+    color: $success;
+    border-color: $success;
+  }
+}
+
+@mixin info {
+  @include selectors($info);
+  background-color: $info;
+  color: $light;
+  &.outlined {
+    background-color: $light;
+    color: $info;
+    border-color: $info;
+  }
+}
+
+@mixin warning {
+  @include selectors($warning);
+  background-color: $warning;
+  color: $dark;
+  &.outlined {
+    background-color: $light;
+    color: $warning;
+    border-color: $warning;
+  }
+}
+
+@mixin danger {
+  @include selectors($danger);
+  background-color: $danger;
+  color: $light;
+  &.outlined {
+    background-color: $light;
+    color: $danger;
+    border-color: $danger;
+  }
+}
+
+@mixin light {
+  @include selectors($dark);
+  background-color: $light;
+  color: $dark;
+  &.outlined {
+    background-color: $light;
+    color: $dark;
+    border-color: $dark;
+  }
+}
+
+@mixin dark {
+  @include selectors($dark);
+  background-color: $dark;
+  color: $light;
+  &.outlined {
+    background-color: $dark;
+    color: $light;
+    border-color: $light;
+  }
+}
+
+@mixin transparent {
+  background-color: transparent;
+  color: $dark;
+}
+
+@mixin outlined {
+  border-style: solid;
+  border-width: 1px;
+}
+
+@mixin selectors($color) {
+  &:not(.outlined) {
+    &:hover {
+      filter: grayscale(30%);
+    }
+    &:active {
+      filter: grayscale(60%);
+    }
+  }
+  &.outlined {
+    &:hover {
+      background: rgba($color: $color, $alpha: 0.15);
+    }
+    &:active {
+      background: rgba($color: $color, $alpha: 0.3);
+    }
+  }
+}
