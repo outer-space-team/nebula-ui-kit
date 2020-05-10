@@ -1,5 +1,5 @@
 @import "../variables/colors.scss";
-@import "../mixins.scss";
+@import "../mixins/mixins.scss";
 
 .rounded {
   @include rounded;

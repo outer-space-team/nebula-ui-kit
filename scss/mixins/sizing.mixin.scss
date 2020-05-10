@@ -1,0 +1,26 @@
+// Sizing
+$xs: 0.7;
+$sm: 0.8;
+$md: 1;
+$lg: 1.2;
+$xl: 1.3;
+
+@mixin xs($size) {
+  font-size: $size * $xs;
+}
+
+@mixin sm($size) {
+  font-size: $size * $sm;
+}
+
+@mixin md($size) {
+  font-size: $size * $md;
+}
+
+@mixin lg($size) {
+  font-size: $size * $lg;
+}
+
+@mixin xl($size) {
+  font-size: $size * $xl;
+}

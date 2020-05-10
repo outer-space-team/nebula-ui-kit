@@ -1,0 +1,11 @@
+@import "./colors.mixin.scss";
+@import "./sizing.mixin.scss";
+
+@mixin clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+@mixin rounded {
+  border-radius: 100px;
+}

@@ -1,16 +1,20 @@
 // Properties that can be not supported:
 // filter, user-select
 @import "../variables/colors.scss";
-@import "../mixins.scss";
+@import "../mixins/mixins.scss";
 
 .nuk,
 .nuk-button {
-  &:not(.secondary):not(.link):not(.success):not(.info):not(.warning):not(.danger):not(.light):not(.dark) {
+  &:not(.secondary):not(.link):not(.success):not(.info):not(.warning):not(.danger):not(.light):not(.dark):not(.transparent) {
     @include primary;
+  }
+  &:not(.xs):not(.sm):not(.lg):not(.xl) {
+    @include md(1rem);
   }
 
   @include clickable;
   padding: 0.2rem 0.7rem;
-  border: none;
+  border-style: solid;
+  border-width: 1px;
   border-radius: 3px;
 }

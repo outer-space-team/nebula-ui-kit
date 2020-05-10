@@ -1,50 +1,13 @@
-// // Sizing
-// $xs: 0.65;
-// $sm: 0.85;
-// $md: 1;
-// $lg: 1.15;
-// $xl: 1.35;
+@import "../variables/colors.scss";
 
-// @mixin xs($size) {
-//   font-size: $size * $xs;
-// }
-
-// @mixin sm($size) {
-//   font-size: $size * $sm;
-// }
-
-// @mixin md($size) {
-//   font-size: $size * $md;
-// }
-
-// @mixin lg($size) {
-//   font-size: $size * $lg;
-// }
-
-// @mixin xl($size) {
-//   font-size: $size * $xl;
-// }
-
-@import "./variables/colors.scss";
-
-@mixin clickable {
-  cursor: pointer;
-  user-select: none;
-}
-
-@mixin rounded {
-  border-radius: 100px;
-}
-
-// Colors
 @mixin primary {
   @include selectors($primary);
   background-color: $primary;
   color: $light;
+  border-color: $primary;
   &.outlined {
     background-color: $light;
     color: $primary;
-    border-color: $primary;
   }
 }
 
@@ -52,10 +15,10 @@
   @include selectors($secondary);
   background-color: $secondary;
   color: $light;
+  border-color: $secondary;
   &.outlined {
     background-color: $light;
     color: $secondary;
-    border-color: $secondary;
   }
 }
 
@@ -63,10 +26,10 @@
   @include selectors($link);
   background-color: $link;
   color: $light;
+  border-color: $link;
   &.outlined {
     background-color: $light;
     color: $link;
-    border-color: $link;
   }
 }
 
@@ -74,10 +37,10 @@
   @include selectors($success);
   background-color: $success;
   color: $light;
+  border-color: $success;
   &.outlined {
     background-color: $light;
     color: $success;
-    border-color: $success;
   }
 }
 
@@ -85,10 +48,10 @@
   @include selectors($info);
   background-color: $info;
   color: $light;
+  border-color: $info;
   &.outlined {
     background-color: $light;
     color: $info;
-    border-color: $info;
   }
 }
 
@@ -96,10 +59,10 @@
   @include selectors($warning);
   background-color: $warning;
   color: $dark;
+  border-color: $warning;
   &.outlined {
     background-color: $light;
     color: $warning;
-    border-color: $warning;
   }
 }
 
@@ -107,10 +70,10 @@
   @include selectors($danger);
   background-color: $danger;
   color: $light;
+  border-color: $danger;
   &.outlined {
     background-color: $light;
     color: $danger;
-    border-color: $danger;
   }
 }
 
@@ -118,10 +81,10 @@
   @include selectors($dark);
   background-color: $light;
   color: $dark;
+  border-color: $dark;
   &.outlined {
     background-color: $light;
     color: $dark;
-    border-color: $dark;
   }
 }
 
@@ -129,30 +92,27 @@
   @include selectors($dark);
   background-color: $dark;
   color: $light;
+  border-color: $light;
   &.outlined {
     background-color: $dark;
     color: $light;
-    border-color: $light;
   }
 }
 
 @mixin transparent {
+  @include selectors($dark);
   background-color: transparent;
   color: $dark;
-}
-
-@mixin outlined {
-  border-style: solid;
-  border-width: 1px;
+  border-color: transparent;
 }
 
 @mixin selectors($color) {
   &:not(.outlined) {
     &:hover {
-      filter: grayscale(30%);
+      filter: brightness(0.7);
     }
     &:active {
-      filter: grayscale(60%);
+      filter: brightness(0.4);
     }
   }
   &.outlined {

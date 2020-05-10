@@ -1,21 +1,21 @@
-// @import "../mixins.scss";
+@import "../mixins/mixins.scss";
 
-// .xs {
-//   @include xs(1rem);
-// }
+.xs {
+  @include xs(1rem);
+}
 
-// .sm {
-//   @include sm(1rem);
-// }
+.sm {
+  @include sm(1rem);
+}
 
-// .md {
-//   @include md(1rem);
-// }
+.md {
+  @include md(1rem);
+}
 
-// .lg {
-//   @include lg(1rem);
-// }
+.lg {
+  @include lg(1rem);
+}
 
-// .xl {
-//   @include xl(1rem);
-// }
+.xl {
+  @include xl(1rem);
+}
