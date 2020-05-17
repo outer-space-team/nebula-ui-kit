@@ -5,8 +5,8 @@
 
 .nuk,
 .nuk-button {
-  &:not(.secondary):not(.link):not(.success):not(.info):not(.warning):not(.danger):not(.light):not(.dark):not(.transparent) {
-    @include primary;
+  &:not(.primary):not(.secondary):not(.link):not(.success):not(.info):not(.warning):not(.danger):not(.light):not(.dark):not(.transparent) {
+    @include button;
   }
   &:not(.xs):not(.sm):not(.lg):not(.xl) {
     @include md(1rem);

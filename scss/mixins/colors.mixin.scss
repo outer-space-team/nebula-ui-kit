@@ -1,109 +1,80 @@
 @import "../variables/colors.scss";
 
+// Colors
 @mixin primary {
   @include selectors($primary);
-  background-color: $primary;
-  color: $light;
-  border-color: $primary;
-  &.outlined {
-    background-color: $light;
-    color: $primary;
-  }
+  @include colorize($primary, $light);
 }
 
 @mixin secondary {
   @include selectors($secondary);
-  background-color: $secondary;
-  color: $light;
-  border-color: $secondary;
-  &.outlined {
-    background-color: $light;
-    color: $secondary;
-  }
+  @include colorize($secondary, $light);
 }
 
 @mixin link {
   @include selectors($link);
-  background-color: $link;
-  color: $light;
-  border-color: $link;
-  &.outlined {
-    background-color: $light;
-    color: $link;
-  }
+  @include colorize($link, $light);
 }
 
 @mixin success {
   @include selectors($success);
-  background-color: $success;
-  color: $light;
-  border-color: $success;
-  &.outlined {
-    background-color: $light;
-    color: $success;
-  }
+  @include colorize($success, $light);
 }
 
 @mixin info {
   @include selectors($info);
-  background-color: $info;
-  color: $light;
-  border-color: $info;
-  &.outlined {
-    background-color: $light;
-    color: $info;
-  }
+  @include colorize($info, $light);
 }
 
 @mixin warning {
   @include selectors($warning);
-  background-color: $warning;
-  color: $dark;
-  border-color: $warning;
-  &.outlined {
-    background-color: $light;
-    color: $warning;
-  }
+  @include colorize($warning, $light);
 }
 
 @mixin danger {
   @include selectors($danger);
-  background-color: $danger;
-  color: $light;
-  border-color: $danger;
-  &.outlined {
-    background-color: $light;
-    color: $danger;
-  }
+  @include colorize($danger, $light);
 }
 
 @mixin light {
   @include selectors($dark);
-  background-color: $light;
-  color: $dark;
-  border-color: $dark;
-  &.outlined {
-    background-color: $light;
-    color: $dark;
-  }
+  @include colorize($light, $dark);
 }
 
 @mixin dark {
   @include selectors($dark);
-  background-color: $dark;
-  color: $light;
-  border-color: $light;
-  &.outlined {
-    background-color: $dark;
-    color: $light;
-  }
+  @include colorize($dark, $light);
 }
 
 @mixin transparent {
   @include selectors($dark);
+  &:not(.outlined) {
+    &:hover {
+      color: #808080;
+    }
+    &:active {
+      color: #ffffff;
+    }
+  }
   background-color: transparent;
   color: $dark;
   border-color: transparent;
+}
+
+// Elements
+@mixin button {
+  @include selectors($button);
+  @include colorize($button, $light);
+}
+
+@mixin colorize($background, $text) {
+  background-color: $background;
+  color: $text;
+  border-color: $background;
+  &.outlined {
+    background-color: $text;
+    color: $background;
+  }
 }
 
 @mixin selectors($color) {

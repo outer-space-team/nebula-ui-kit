@@ -36,30 +36,6 @@
   @include dark;
 }
 
-.primary {
-  @include primary;
-}
-
-.secondary {
-  @include secondary;
-}
-
-.link {
-  @include link;
-}
-
-.success {
-  @include success;
-}
-
-.info {
-  @include info;
-}
-
-.warning {
-  @include warning;
-}
-
 .transparent {
   @include transparent;
 }
