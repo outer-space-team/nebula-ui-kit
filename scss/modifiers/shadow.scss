@@ -1,0 +1,9 @@
+@import "../mixins/mixins.scss";
+
+.shadow {
+  @include shadow;
+}
+
+.no-shadow {
+  @include no-shadow;
+}

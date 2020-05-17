@@ -3,6 +3,16 @@
 @import "../variables/colors.scss";
 @import "../mixins/mixins.scss";
 
+@mixin buttonShadow {
+  @include shadow;
+  &:hover {
+    @include shadowHover;
+  }
+  &:active {
+    @include shadowActive;
+  }
+}
+
 .nuk,
 .nuk-button {
   &:not(.primary):not(.secondary):not(.link):not(.success):not(.info):not(.warning):not(.danger):not(.light):not(.dark):not(.transparent) {
@@ -13,6 +23,15 @@
   }
 
   @include clickable;
+  &:not(.no-shadow):not(.transparent) {
+    &.outlined {
+      @include no-shadow;
+      &.shadow {
+        @include buttonShadow;
+      }
+    }
+    @include buttonShadow;
+  }
   padding: 0.2rem 0.7rem;
   border-style: solid;
   border-width: 1px;

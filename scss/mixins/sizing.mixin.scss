@@ -15,7 +15,6 @@ $xl: 1.3;
 
 @mixin md($size) {
   font-size: $size * $md;
-  // line-height: $size * $md;
 }
 
 @mixin lg($size) {
