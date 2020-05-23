@@ -1,49 +1,49 @@
-@import "../variables/colors.scss";
+@import "../variables/variables.scss";
 
 // Colors
 @mixin primary {
   @include selectors($primary);
-  @include colorize($primary, $light);
+  @include colors($primary, $light);
 }
 
 @mixin secondary {
   @include selectors($secondary);
-  @include colorize($secondary, $light);
+  @include colors($secondary, $light);
 }
 
 @mixin link {
   @include selectors($link);
-  @include colorize($link, $light);
+  @include colors($link, $light);
 }
 
 @mixin success {
   @include selectors($success);
-  @include colorize($success, $light);
+  @include colors($success, $light);
 }
 
 @mixin info {
   @include selectors($info);
-  @include colorize($info, $light);
+  @include colors($info, $light);
 }
 
 @mixin warning {
   @include selectors($warning);
-  @include colorize($warning, $light);
+  @include colors($warning, $light);
 }
 
 @mixin danger {
   @include selectors($danger);
-  @include colorize($danger, $light);
+  @include colors($danger, $light);
 }
 
 @mixin light {
   @include selectors($dark);
-  @include colorize($light, $dark);
+  @include colors($light, $dark);
 }
 
 @mixin dark {
   @include selectors($dark);
-  @include colorize($dark, $light);
+  @include colors($dark, $light);
 }
 
 @mixin transparent {
@@ -64,16 +64,20 @@
 // Elements
 @mixin button {
   @include selectors($button);
-  @include colorize($button, $light);
+  @include colors($button, $light);
 }
 
-@mixin colorize($background, $text) {
+@mixin colors($background, $text) {
   background-color: $background;
-  color: $text;
+  &:not(.text-primary):not(.text-secondary):not(.text-link):not(.text-success):not(.text-info):not(.text-warning):not(.text-danger):not(.text-light):not(.text-dark):not(.text-grey1):not(.text-grey2):not(.text-grey3):not(.text-grey4):not(.text-grey5):not(.text-grey6) {
+    color: $text;
+  }
   border-color: $background;
   &.outlined {
+    &:not(.text-primary):not(.text-secondary):not(.text-link):not(.text-success):not(.text-info):not(.text-warning):not(.text-danger):not(.text-light):not(.text-dark):not(.text-grey1):not(.text-grey2):not(.text-grey3):not(.text-grey4):not(.text-grey5):not(.text-grey6) {
+      color: $background;
+    }
     background-color: $text;
-    color: $background;
   }
 }
 
@@ -94,4 +98,64 @@
       background: rgba($color: $color, $alpha: 0.3);
     }
   }
+}
+
+@mixin textPrimary {
+  color: $primary;
+}
+
+@mixin textSecondary {
+  color: $secondary;
+}
+
+@mixin textLink {
+  color: $link;
+}
+
+@mixin textSuccess {
+  color: $success;
+}
+
+@mixin textInfo {
+  color: $info;
+}
+
+@mixin textWarning {
+  color: $warning;
+}
+
+@mixin textDanger {
+  color: $danger;
+}
+
+@mixin textLight {
+  color: $light;
+}
+
+@mixin textDark {
+  color: $dark;
+}
+
+@mixin textGrey1 {
+  color: $grey1;
+}
+
+@mixin textGrey2 {
+  color: $grey2;
+}
+
+@mixin textGrey3 {
+  color: $grey3;
+}
+
+@mixin textGrey4 {
+  color: $grey4;
+}
+
+@mixin textGrey5 {
+  color: $grey5;
+}
+
+@mixin textGrey6 {
+  color: $grey6;
 }

@@ -1,0 +1,101 @@
+@import "../mixins/mixins.scss";
+
+.primary {
+  @include primary;
+}
+
+.secondary {
+  @include secondary;
+}
+
+.link {
+  @include link;
+}
+
+.success {
+  @include success;
+}
+
+.info {
+  @include info;
+}
+
+.warning {
+  @include warning;
+}
+
+.danger {
+  @include danger;
+}
+
+.light {
+  @include light;
+}
+
+.dark {
+  @include dark;
+}
+
+.transparent {
+  @include transparent;
+}
+
+.text-primary {
+  @include textPrimary;
+}
+
+.text-secondary {
+  @include textSecondary;
+}
+
+.text-link {
+  @include textLink;
+}
+
+.text-success {
+  @include textSuccess;
+}
+
+.text-info {
+  @include textInfo;
+}
+
+.text-warning {
+  @include textWarning;
+}
+
+.text-danger {
+  @include textDanger;
+}
+
+.text-light {
+  @include textLight;
+}
+
+.text-dark {
+  @include textDark;
+}
+
+.text-grey1 {
+  @include textGrey1;
+}
+
+.text-grey2 {
+  @include textGrey2;
+}
+
+.text-grey3 {
+  @include textGrey3;
+}
+
+.text-grey4 {
+  @include textGrey4;
+}
+
+.text-grey5 {
+  @include textGrey5;
+}
+
+.text-grey6 {
+  @include textGrey6;
+}

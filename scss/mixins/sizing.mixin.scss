@@ -1,26 +1,26 @@
-// Sizing
-$xs: 0.7;
-$sm: 0.8;
-$md: 1;
-$lg: 1.2;
-$xl: 1.3;
+@import "../variables/variables.scss";
 
 @mixin xs($size) {
   font-size: $size * $xs;
+  line-height: $size * $xs;
 }
 
 @mixin sm($size) {
   font-size: $size * $sm;
+  line-height: $size * $sm;
 }
 
 @mixin md($size) {
   font-size: $size * $md;
+  line-height: $size * $md;
 }
 
 @mixin lg($size) {
   font-size: $size * $lg;
+  line-height: $size * $lg;
 }
 
 @mixin xl($size) {
   font-size: $size * $xl;
+  line-height: $size * $xl;
 }
